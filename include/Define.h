@@ -18,8 +18,8 @@
 #define START_Z (0)  /* スタート地点のZ座標 */
 #define START   (START_X/2+(START_Y/2)*VW+START_Z*VW*VD) /* スタート地点の頂点座標 */
 
-#define GOAL_X  (3)  /* ゴール地点のX座標 */
-#define GOAL_Y  (5)  /* ゴール地点のY座標 */
+#define GOAL_X  (19)  /* ゴール地点のX座標 */
+#define GOAL_Y  (19)  /* ゴール地点のY座標 */
 #define GOAL_Z  (2)  /* ゴール地点のZ座標 */
 #define GOAL    (GOAL_X/2+(GOAL_Y/2)*VW+GOAL_Z*VW*VD) /* スタート地点の頂点座標 */
 
