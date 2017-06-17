@@ -21,14 +21,3 @@ Edge* kruskal(Edge *es)
   
   return ret;
 }
-
-void kruskal_free(Edge *es)
-{
-  int i;
-  for(i=KRUSKAL_E-1;i>=0;i--)
-    {
-      free(&es[i].cost);
-      free(&es[i].u);
-      free(&es[i].v);
-    }
-}
