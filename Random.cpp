@@ -1,6 +1,6 @@
 #include"include/Random.h"
 
-ui random_xorshift()
+ui random_xorshift(void)
 {
   static ui seed=time(NULL);
   seed=seed^(seed<<13);
