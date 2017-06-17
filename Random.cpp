@@ -2,7 +2,7 @@
 
 ui random_xorshift()
 {
-  static ui seed=1;//time(NULL);
+  static ui seed=time(NULL);
   seed=seed^(seed<<13);
   seed=seed^(seed>>17);
   return seed=seed^(seed<<5);
