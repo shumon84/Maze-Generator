@@ -1,5 +1,7 @@
 #include"include/Maze.h"
 
+int maze[HEIGHT][DEPTH][WIDTH]={}; // 迷路の状態。添え字は[z][y][x]になる
+
 int vertex_x(int vertex)
 {
   if(vertex!=-1)
@@ -105,11 +107,9 @@ Edge* maze_cost_init()
   return edge;
 }
 
-Edge* maze_genelater(void)
+Edge* maze_MST(void)
 {
-  int i,j,k;
   Edge *edge;
-  int maze[HEIGHT][DEPTH][WIDTH]={}; // 迷路の状態。添え字は[z][y][x]になる
 
   define_check();
 
@@ -118,4 +118,33 @@ Edge* maze_genelater(void)
   edge=kruskal(edge); // 最小全域木を構築
 
   return edge;
+}
+
+int(* maze_generator(void))[DEPTH][WIDTH]
+{
+  int i,j,k;
+  int x,y,z;
+  Edge *edge;
+  
+  edge=maze_MST();
+
+  rep(k,HEIGHT)
+    rep(j,DEPTH)
+      rep(i,WIDTH)
+        maze[k][j][i]=0;
+
+  rep(k,VH)
+    rep(j,VD)
+      rep(i,VW)
+        maze[k][j*2+1][i*2+1]=1;
+
+  rep(i,KRUSKAL_E)
+    {
+      x=edge_x(edge[i]);
+      y=edge_y(edge[i]);
+      z=edge_z(edge[i]);
+      maze[z][y][x]=1;
+    }
+
+  return maze;
 }
