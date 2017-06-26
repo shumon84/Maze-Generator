@@ -5,8 +5,8 @@
 
 #include"Templet.h"
 
-#define WIDTH   (21) /* ダンジョンの横幅(X座標) */
-#define DEPTH   (21) /* ダンジョンの奥行(Y座標) */
+#define WIDTH   (31) /* ダンジョンの横幅(X座標) */
+#define DEPTH   (31) /* ダンジョンの奥行(Y座標) */
 #define HEIGHT  (3)  /* ダンジョンの高さ(Z座標) */
 
 #define VW (WIDTH/2) /* 頂点のx座標の最大値 */
@@ -18,12 +18,12 @@
 #define START_Z (0)  /* スタート地点のZ座標 */
 #define START   (START_X/2+(START_Y/2)*VW+START_Z*VW*VD) /* スタート地点の頂点座標 */
 
-#define GOAL_X  (19)  /* ゴール地点のX座標 */
-#define GOAL_Y  (19)  /* ゴール地点のY座標 */
-#define GOAL_Z  (2)  /* ゴール地点のZ座標 */
+#define GOAL_X  (WIDTH-2)  /* ゴール地点のX座標 */
+#define GOAL_Y  (DEPTH-2)  /* ゴール地点のY座標 */
+#define GOAL_Z  (HEIGHT-1)  /* ゴール地点のZ座標 */
 #define GOAL    (GOAL_X/2+(GOAL_Y/2)*VW+GOAL_Z*VW*VD) /* スタート地点の頂点座標 */
 
-#define SPLIT_RATIO (25) /* 階段の配置率を設定(100分率) */
+#define SPLIT_RATIO (1) /* 階段の配置率を設定(100分率) */
 
 typedef struct edge
 {
