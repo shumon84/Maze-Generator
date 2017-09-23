@@ -1,7 +1,7 @@
 # Maze-Generator
 迷路を自動で生成できます
 
-# Unity上での使い方
+# 使い方
 Edge* maze_MST(void)またはint(* maze_generator(void))[DEPTH][WIDTH]のいずれかを呼び出すと迷路が生成されます。　　　
 
 maze_MSTを呼び出した場合、生成される迷路は辺集合で表現されます。　　　
